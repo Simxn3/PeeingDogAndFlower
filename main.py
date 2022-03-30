@@ -9,8 +9,8 @@ os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 
 # constants
-WIDTH = 400
-HEIGHT = 300
+WIDTH = 1440
+HEIGHT = 900
 FPS = 2
 
 # RGB colors
@@ -35,7 +35,7 @@ pygame.image.load('./Pictures/frame_6.png')
 
 # changes size of all images to fit screen
 for i in range(len(my_images)):
-  my_images[i] = pygame.transform.scale(my_images[i], (300, 200))
+  my_images[i] = pygame.transform.scale(my_images[i], (500, 500))
 
 # set Window
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -43,7 +43,7 @@ pygame.display.set_caption("Yellow Showers")
 WINDOW.fill(white)
  
 # set up your font
-font = pygame.font.Font('Fonts/NYCD.ttf', 20)
+font = pygame.font.Font('Fonts/NYCD.ttf', 65)
 
 # create your text
 text = font.render('By: Simone and Layla', True, black, white)
@@ -62,7 +62,7 @@ def drawShape():
   global image_count
   if (image_count == 6):
     image_count = 0
-  WINDOW.blit(my_images[image_count], (0, 100))
+  WINDOW.blit(my_images[image_count], (470, 250))
   pygame.display.flip()
   image_count += 1
   
